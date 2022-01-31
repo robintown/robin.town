@@ -8,9 +8,4 @@
 
 {% assign breadcrumb_text = breadcrumb_page.title %}
 
-{% unless breadcrumb_page == nil %}
-  <a href="{{ breadcrumb_page.url }}">{{ breadcrumb_text }}</a>
-{% else %}
-  {{ breadcrumb_text }}
-{% endunless %}
-›
+<a href="{{ breadcrumb_page.url }}">{{ breadcrumb_text }}</a>&nbsp;›
