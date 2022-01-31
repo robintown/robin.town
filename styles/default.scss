@@ -1,0 +1,81 @@
+---
+---
+
+@import '/fonts/inter.css';
+
+$accent-1: #d52525;
+$accent-2: #7650f0;
+
+html {
+  background: #fffafa;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 64ch;
+  margin: 4vw auto;
+  padding: 16px;
+}
+
+body.wide {
+  max-width: 800px;
+  padding: 16px 0;
+
+  > :not(.wide) {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+footer {
+  margin-top: 40px;
+  opacity: 0.6;
+}
+
+h1 {
+  padding-bottom: 8px;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-image: linear-gradient(to right, $accent-1, $accent-2) 1;
+  margin: 0 0 40px;
+  width: fit-content;
+}
+
+h2 {
+  margin: 30px 0 12px;
+}
+
+a {
+  color: $accent-1;
+}
+
+ul, ol {
+  padding-left: 30px;
+}
+
+.shout {
+  font-size: 1.4em;
+  font-weight: 500;
+}
+
+.translation {
+  opacity: 0.6;
+  font-weight: initial;
+}
+
+.webtoon {
+  width: 100%;
+  height: auto;
+}
+
+.list-nav {
+  display: flex;
+  margin-top: 16px;
+  margin-bottom: 16px;
+
+  .list-nav-forward {
+    margin-left: auto;
+  }
+}

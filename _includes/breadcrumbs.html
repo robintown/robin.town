@@ -1,0 +1,13 @@
+{% assign dirs = page.dir | split: "/" %}
+{% for dir in dirs %}
+  {% assign path = path | append: dir | append: "/" %}
+  {% unless path == page.url %}
+    {% capture breadcrumb_text %}{% include breadcrumb_text.html url=path default=dir %}{% endcapture %}
+    {% assign breadcrumb_text = breadcrumb_text | split: "🗾" %}
+    {% assign breadcrumbs = breadcrumbs | concat: breadcrumb_text %}
+  {% endunless %}
+{% endfor %}
+
+{% if breadcrumbs %}
+  <nav>{{ breadcrumbs }}</nav>
+{% endif %}
